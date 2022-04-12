@@ -2,6 +2,8 @@ import pygame, sys
 from settings import *
 from level import Level
 
+RUNNING = True
+
 class Game:
 	def __init__(self):
 		  
@@ -14,7 +16,7 @@ class Game:
 		self.level = Level()
 	
 	def run(self):
-		while True:
+		while RUNNING:
 			for event in pygame.event.get():
 				if event.type == pygame.QUIT:
 					pygame.quit()
